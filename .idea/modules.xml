@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GLWallpaperTest.iml" filepath="$PROJECT_DIR$/GLWallpaperTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gLWallpaperService/gLWallpaperService.iml" filepath="$PROJECT_DIR$/gLWallpaperService/gLWallpaperService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gLWallpaperTest/gLWallpaperTest.iml" filepath="$PROJECT_DIR$/gLWallpaperTest/gLWallpaperTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libcrop/libcrop.iml" filepath="$PROJECT_DIR$/libcrop/libcrop.iml" />
+    </modules>
+  </component>
+</project>

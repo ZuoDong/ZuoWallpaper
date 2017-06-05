@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.markguerra.android.glwallpapertest"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="7" />
+
+    <uses-feature
+        android:name="android.software.live_wallpaper"
+        android:required="true" />
+
+    <supports-screens android:anyDensity="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".ZWallPaperApplication"
+        android:largeHeap="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name">
+        <activity
+            android:name=".GalleryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <!-- Begin values for NeHe tutorials lesson 02 -->
+        <service
+            android:name="com.glwallpaperservice.testing.wallpapers.nehe.lesson02.NeheLesson02WallpaperService"
+            android:enabled="true"
+            android:label="@string/nehe_lesson_02_label"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter android:priority="1">
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/nehelesson02wallpaper" />
+        </service>
+        <!-- End values for NeHe tutorials lesson 02 -->
+
+
+        <!-- Begin values for NeHe tutorials lesson 08 -->
+        <service
+            android:name="com.glwallpaperservice.testing.wallpapers.nehe.lesson08.NeheLesson08WallpaperService"
+            android:enabled="true"
+            android:label="@string/nehe_lesson_08_label"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter android:priority="1">
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/nehelesson08wallpaper" />
+        </service>
+
+        <activity
+            android:name="com.glwallpaperservice.testing.wallpapers.nehe.lesson08.NeheLesson08SettingsActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.WallpaperSettings" />
+        <!-- End values for NeHe tutorials lesson 08 -->
+
+        <activity android:name=".SettingsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--<activity-->
+            <!--android:configChanges="orientation|screenSize"-->
+            <!--android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity" />-->
+
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity">
+        </activity>
+
+    </application>
+
+</manifest>
